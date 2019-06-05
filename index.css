@@ -3,6 +3,7 @@
 }
 body {
     font-family: 'Playfair Display', serif;
+    margin: 0;
 }
 
 /* All navigation CSS below this line */
@@ -11,27 +12,12 @@ header {
     display: flex; 
     justify-content: space-between;
     position:fixed;
-    margin: 0px;
     width: 100%;
-    height: 10%;
-    background-color: rgba(234, 204, 81, 0.7);
+    background-color: rgba(234, 204, 81, 0.9);
 }
 
 ul.nav {
-    margin-right: 80px;
-}
-
-ul.nav > li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 50px; 
-    margin-right: 50px;
-}
-
-li.nav:hover {
-    border-bottom: 1.5px solid rgb(56, 216, 205);
-    padding-bottom: 0px;
-    padding: 6px;
+    display:none;
 }
 
 h1 {
@@ -51,11 +37,6 @@ h1 {
     align-content: center;
 }
 
-.headlineContent {
-    /* width: 50%; */
-    /* margin-left: 100px; */
-}
-
 .myName, .headlineText {
     margin-left: 80px;
     
@@ -63,26 +44,17 @@ h1 {
 
 /* All CSS for About Me page below this line */
 
-.aboutPage {
+
+.aboutContainer {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
 }
 
-.aboutContainer {
-    display:flex;
-    justify-content: space-evenly;
-}
-
-.aboutText {
-    height:50%;
-    width: 50%; */
-    align-content: right;
-    
-}
-
 .aboutImg {
     height: 500px;
-    align-content: left;
 }
 
 /* All CSS for Projets page below this line */
@@ -91,9 +63,8 @@ h1 {
     height: 100vh;
     width:100%;
     display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
+    justify-content: center;
+    
 }
 
 img.icon {
@@ -106,15 +77,9 @@ ul li.icon {
 }
 
 img.project1Img {
-    width: 700px;
-    align-content: right;
+    width: 100%;
 }
 
-.project1Content {
-    width: 40%;
-    align-content: left;
-    text-align:right;
-}
 
 h3 {
     font-weight: normal;
@@ -124,16 +89,103 @@ button {
     height: 50px; 
     width: 125px;
     font-size: 18px;
-    margin-left: 25px;
 }
 
-
-/* @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+/* Desktop computers */
+@media only screen and (min-width: 768px) {
+    ul.nav {
+      margin-right: 80px;
     }
-  } */
+    ul.nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    ul.nav > li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 50px; 
+        margin-right: 50px;
+    }
+    
+    li.nav:hover {
+        border-bottom: 1.5px solid rgb(56, 216, 205);
+        padding-bottom: 0px;
+        padding: 6px;
+    }
+    
+    .aboutContainer {
+        display:flex;
+        justify-content: space-evenly;
+    }
+    
+    .aboutText {
+        height:50%;
+        width: 50%; */
+        align-content: right;
+        
+    }
+    
+    .aboutImg {
+        height: 500px;
+        align-content: left;
+    }
+    
+    .project1Container {
+        height: 100vh;
+        width:100%;
+        display: flex;
+    }
+    
+    img.icon {
+        height: 40px;
+    }
+    
+    ul li.icon {
+        list-style: none;
+        display:inline-block;
+    }
+    
+    img.project1Img {
+        width: 700px;
+        align-content: right;
+    }
+    
+    .project1Content {
+        width: 40%;
+        align-content: left;
+        text-align:right;
+    }
+    
+    h3 {
+        font-weight: normal;
+    }
+    
+    button {
+        height: 50px; 
+        width: 125px;
+        font-size: 18px;
+        margin-left: 25px;
+    }
+  }
 
+  @media only screen and (min-width: 320px) { 
+    .project1Container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    .aboutContainer {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    
+  }
 
 
 
