@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+ ul.nav {
+    display: none;
+} 
+
 /* All navigation CSS below this line */
 
 header {
@@ -13,17 +17,25 @@ header {
     justify-content: space-between;
     position:fixed;
     width: 100%;
-    background-color: rgba(234, 204, 81, 0.9);
+    background-color: rgba(59,132,138,0.3);
+    top: 0;
 }
 
-ul.nav {
-    display:none;
+.hamburger {
+    height: 25px;
+    opacity: 0.7;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.hamburger:hover {
+    /* get a new hamburger icon */
 }
 
 h1 {
     margin-left: 15px;
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 /* All CSS for headline below this line */
@@ -31,68 +43,149 @@ h1 {
 .headlineContainer {
     height: 100vh;
     width:100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
 }
+
+.headlineContainer {
+    background-image: urL("https://lh3.googleusercontent.com/rGwhwshQd9Ha2Jx9C_ydBNxBKjg2tLPRc4c2MZoqQKjNIoAbBpUWjDKZiuHPjAKnN5hWQi1pGXPurPvMgQne4lWKW2uvnVsQvbG549-3jj-N_KSDJCXdOvxEwo6YaPkk8-2D_arGcSk4h4UeQ0d5Mg82_HtYWsQxqO3kJOisd64PA4qdB_bBB94u6zoM0KEEFBKx9_YcoauU7_gntJa5cXiR3oI5-QHH6VkcUFzSQeibWDX2t5LB9P0p_fpZu0yHDIciH-9z8v0kdvD48GnlxBal-41OdWUFdTZRORHA0FYqqIKUX6ycPDO7cf60P7TZWzxZVtTYyp6tno_EOgLhDSppD5IjIMj6iXPUKMM-wWteexossf8RydFWOb5E62rcMIfHEbOt_k5wI3MF760bZD25wEX1bhcsdPBbNq8dt0czf2j2pK7geatjpayP-uqRyY1LSmG0FJdcUU_0gPnXgCudb_xpSNh6mARcrCgL49pUf_qTBVvgMNymtGaflmVaaEi_b52R5xSu6LYq6avURFMQ-jsZWYdN856Nh6jKRME9EF0CGmv0Hn8C7rtf-V27uH98DMHnbB8pbv3mk6Ikfdkbx7iF3e1h1oXAilOIUTpTjjD3UkKDQC596g4uFbV8WNfhCKvMOq2jTfqO2RTxxH4cGcX3X3k=w750-h500-no");
+    width: 100%;
+    margin-top: 155px;
+}
+
+
+/* .headlineContent {
+    background-color: none;
+    margin-top: 0px; 
+} */
 
 .myName, .headlineText {
     margin-left: 80px;
     
 }
 
+.hello {
+    margin-left: 40px;
+    font-size: 25px;
+    padding: 15px;
+    color: rgb(199,158,158);
+    font-weight: bold;
+}
+
 /* All CSS for About Me page below this line */
 
 
 .aboutContainer {
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
 .aboutImg {
-    height: 500px;
+    height: 400px;
 }
 
-/* All CSS for Projets page below this line */
+.aboutText {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
-.project1Container {
+/* All CSS for Projects page below this line */
+
+.projectsPage {
     height: 100vh;
     width:100%;
+}
+
+.imgContainer {
     display: flex;
     justify-content: center;
-    
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.projectContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.project1Img {
+    width: 100%;
+    margin-top: 100px;
+}
+
+h2.projectTitle {
+    font-size: 16px;
+    text-align: center;
+}
+
+h3.projectDesc {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
 }
 
 img.icon {
-    height: 40px;
+    height: 20px;
 }
 
 ul li.icon {
     list-style: none;
     display:inline-block;
+    margin-top: 0;
 }
 
-img.project1Img {
-    width: 100%;
+ul.iconContainer {
+    text-align: center;
+    display: inline-block;
 }
 
+.buttonContainer {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-content: center;
+} 
 
-h3 {
-    font-weight: normal;
+.button {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 13px;
+    margin-bottom: 100px;
+    margin-left: 30px;
 }
 
-button {
-    height: 50px; 
-    width: 125px;
-    font-size: 18px;
+.button:active, .button:visited {
+    color: black;
 }
+
+.button:hover {
+    border-bottom: 2px solid rgb(54, 185, 199);
+    padding: 3px;
+} 
+
+
+
+
+
 
 /* Desktop computers */
 @media only screen and (min-width: 768px) {
+
+
+/* 'Nav CSS below */
+    h1 {
+        margin-left: 50px;
+    }
+
     ul.nav {
       margin-right: 80px;
     }
@@ -109,83 +202,91 @@ button {
     }
     
     li.nav:hover {
-        border-bottom: 1.5px solid rgb(56, 216, 205);
+        border-bottom: 1.5px solid rgb(200,127,68);
         padding-bottom: 0px;
         padding: 6px;
     }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+/*  headline CSS */
+
+    .headlineContent {
+        margin-top: 20px;
+        margin-left: 375px;
+        height: 300px;
+        width: 600px;
+    } 
     
+/* 'About Page' CSS below  */
+
     .aboutContainer {
         display:flex;
         justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
     }
     
     .aboutText {
-        height:50%;
-        width: 50%; */
-        align-content: right;
+        float: right;
+        width: 50%;
         
     }
     
     .aboutImg {
         height: 500px;
-        align-content: left;
-    }
-    
-    .project1Container {
-        height: 100vh;
-        width:100%;
-        display: flex;
-    }
-    
-    img.icon {
-        height: 40px;
-    }
-    
-    ul li.icon {
-        list-style: none;
-        display:inline-block;
-    }
-    
-    img.project1Img {
-        width: 700px;
-        align-content: right;
-    }
-    
-    .project1Content {
-        width: 40%;
-        align-content: left;
-        text-align:right;
-    }
-    
-    h3 {
-        font-weight: normal;
-    }
-    
-    button {
-        height: 50px; 
-        width: 125px;
-        font-size: 18px;
-        margin-left: 25px;
-    }
-  }
+    } 
 
-  @media only screen and (min-width: 320px) { 
-    .project1Container {
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-    }
-    .aboutContainer {
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    h1 {
-        font-size: 20px;
-    }
+/* Projects CSS below */
+
+.projectsPage {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+}
+
+
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     
-  }
+}
+
+.buttonContainer {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-end;
+      
+} 
+
+.imgContainer {
+    align-self: center;
+}
+
+.button {
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+}
+
+
+
+
 
 
 
