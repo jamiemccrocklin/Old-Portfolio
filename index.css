@@ -75,7 +75,7 @@ h1 {
 .headlineContainer {
     height: 100vh;
     width:100%;
-    background-image: urL("https://github.com/jamiemccrocklin/Portfolio/blob/master/buildings.jpeg?raw=true");
+    background-image: urL("buildings.jpeg");
     width: 100%;
     margin-top: 60px; /* override this in the ipad section */
     margin-bottom: 0px;
