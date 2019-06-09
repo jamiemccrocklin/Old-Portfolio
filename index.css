@@ -6,11 +6,16 @@ body {
     margin: 0;
 }
 
- ul.nav {
+/* All navigation CSS below this line */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul.nav {
     display: none;
 } 
-
-/* All navigation CSS below this line */
 
 header {
     display: flex; 
@@ -70,7 +75,7 @@ h1 {
 .headlineContainer {
     height: 100vh;
     width:100%;
-    background-image: urL("https://lh3.googleusercontent.com/rGwhwshQd9Ha2Jx9C_ydBNxBKjg2tLPRc4c2MZoqQKjNIoAbBpUWjDKZiuHPjAKnN5hWQi1pGXPurPvMgQne4lWKW2uvnVsQvbG549-3jj-N_KSDJCXdOvxEwo6YaPkk8-2D_arGcSk4h4UeQ0d5Mg82_HtYWsQxqO3kJOisd64PA4qdB_bBB94u6zoM0KEEFBKx9_YcoauU7_gntJa5cXiR3oI5-QHH6VkcUFzSQeibWDX2t5LB9P0p_fpZu0yHDIciH-9z8v0kdvD48GnlxBal-41OdWUFdTZRORHA0FYqqIKUX6ycPDO7cf60P7TZWzxZVtTYyp6tno_EOgLhDSppD5IjIMj6iXPUKMM-wWteexossf8RydFWOb5E62rcMIfHEbOt_k5wI3MF760bZD25wEX1bhcsdPBbNq8dt0czf2j2pK7geatjpayP-uqRyY1LSmG0FJdcUU_0gPnXgCudb_xpSNh6mARcrCgL49pUf_qTBVvgMNymtGaflmVaaEi_b52R5xSu6LYq6avURFMQ-jsZWYdN856Nh6jKRME9EF0CGmv0Hn8C7rtf-V27uH98DMHnbB8pbv3mk6Ikfdkbx7iF3e1h1oXAilOIUTpTjjD3UkKDQC596g4uFbV8WNfhCKvMOq2jTfqO2RTxxH4cGcX3X3k=w750-h500-no");
+    background-image: urL("https://github.com/jamiemccrocklin/Portfolio/blob/master/buildings.jpeg?raw=true");
     width: 100%;
     margin-top: 60px; /* override this in the ipad section */
     margin-bottom: 0px;
@@ -195,7 +200,7 @@ ul.iconContainer {
 
 
 /* Desktop computers */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1200px) {
 
 
 /* Nav CSS below */
@@ -348,7 +353,7 @@ ul.iconContainer {
 
 
 /* iPads */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 1199px) {
 
 /* iPad Nav CSS below */
 
@@ -390,7 +395,8 @@ ul.iconContainer {
         background-repeat: no-repeat;
         min-height: 100vh;
         margin-bottom: 0px;
-        /* margin-top: 520px; */
+        margin-top: 520px;
+
     }
 
     .myName, .headlineText {
