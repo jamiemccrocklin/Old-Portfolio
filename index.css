@@ -76,10 +76,16 @@ h1 {
     height: 100vh;
     width:100%;
     background-image: urL("buildings.jpeg");
+    background-position-y: bottom;
+    background-repeat-y: no-repeat;
     width: 100%;
-    margin-top: 60px; /* override this in the ipad section */
-    margin-bottom: 0px;
+    margin-bottom: 100px;
+}
 
+.headlineContent {
+    top: 75px;
+    position: relative;
+    padding: 15px;
 }
 
 .myName, .headlineText {
@@ -102,12 +108,14 @@ h1 {
 
 .aboutImg {
     height: 400px;
+    margin-top: 100px;
 }
 
 .aboutText {
     margin-left: 20px;
     margin-right: 20px;
     line-height: 30px;
+    font-size: 16px;
 }
 
 
@@ -239,6 +247,11 @@ ul.iconContainer {
 
 /*  headline CSS */
 
+    .headlineContent {
+        top: 115px;
+        position: relative;
+    }
+
     .myName, .headlineText {
         margin-left: 80px;  
     }  
@@ -259,10 +272,6 @@ ul.iconContainer {
         color: rgb(205,158,93);
     }
     
-    .headlineContainer {
-        margin-top: 155px;
-    }
-
     .headlineContent {
         margin-top: 20px;
         margin-left: 375px;
@@ -311,7 +320,6 @@ ul.iconContainer {
         align-items: center;
         align-content: center;
         padding: 20px;
-        
     }
 
     .buttonContainer {
@@ -325,10 +333,15 @@ ul.iconContainer {
     img.icon {
         height: 30px;
     }
-
+ 
     .imgContainer {
         align-self: center;
         margin-right: 20px;
+    }
+
+    .project1Img {
+        width: 700px;
+        margin-top: 0px;
     }
 
     h2.projectTitle {
@@ -359,7 +372,7 @@ ul.iconContainer {
 
     h1 {
         margin-left: 50px;
-        font-size: 30px;
+        font-size: 35px;
     }
 
     ul.nav {
@@ -372,7 +385,7 @@ ul.iconContainer {
     }
     
     ul.nav > li {
-        list-style: none;
+        list-style: none; /* Not sure if I want to have the hamburger here or not */
         display: inline-block;
         margin-left: 30px; 
         margin-right: 10px;
@@ -391,12 +404,10 @@ ul.iconContainer {
 
 
 /*  iPad headline CSS */
-    .headlineContainer {
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        margin-bottom: 0px;
-        margin-top: 520px;
 
+    .headlineContent {
+        top: 200px;
+        font-size: 25px;
     }
 
     .myName, .headlineText {
@@ -406,26 +417,55 @@ ul.iconContainer {
     .hello {
         margin-left: 40px;
         font-size: 25px;
-        padding: 15px;
-        color: rgb(205,158,93);
-        font-weight: bold;
-    }
-    
-    
-    .bold {
-        font-family: 'Playfair Display SC', serif;
-        font-weight: bold;
-        font-size: 18px;
-        color: rgb(205,158,93);
     }
 
-    .headlineContent {
-        /* margin-top: 100px; */
-        height: 300px;
-        width: 600px;
-        line-height: 32px;
-        font-size: 20px;
-    } 
+    .name {
+        font-size: 40px;
+    }
+    
+    .bold {
+        font-size: 30px;
+    }
+
+/* iPad About CSS*/
+
+    .aboutImg {
+        height: 500px;
+        margin-top: 0px;
+    }
+
+    .aboutText {
+        font-size: 25px; 
+        line-height: 40px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+/* iPad Project CSS */
+
+    .project1Img {
+        margin-top: 0px;
+    }
+
+    h2.projectTitle {
+        font-size: 35px;
+        margin-top: 75px;
+    }
+    
+    h3.projectDesc {
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    img.icon {
+        height: 50px;
+    }
+
+    .button {
+        font-size: 25px;
+        margin-left: 100px;
+        margin-top: 40px;
+    }
 
 }
 
