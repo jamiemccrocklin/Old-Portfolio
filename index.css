@@ -26,49 +26,61 @@ header {
     opacity: 0.7;
     align-self: center;
     margin-right: 10px;
+    color: rgba(205,158,93); /*<---- not currently working */
 }
 
 .hamburger:hover {
     /* get a new hamburger icon */
 }
 
+
+/* All CSS for headline below this line */
+
+
 h1 {
     margin-left: 15px;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: normal;
     font-size: 20px;
 }
 
-/* All CSS for headline below this line */
+.hello {
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 8px;
+    color: rgb(205,158,93);
+    font-weight: bold;
+}
+
+
+.bold {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(205,158,93);
+}
+
+.name {
+    font-family: 'Playfair Display SC', serif;
+    color: rgb(59,132,138);
+    font-size: 30px;
+    margin-left: 5px;
+}
 
 .headlineContainer {
     height: 100vh;
     width:100%;
-}
-
-.headlineContainer {
     background-image: urL("https://lh3.googleusercontent.com/rGwhwshQd9Ha2Jx9C_ydBNxBKjg2tLPRc4c2MZoqQKjNIoAbBpUWjDKZiuHPjAKnN5hWQi1pGXPurPvMgQne4lWKW2uvnVsQvbG549-3jj-N_KSDJCXdOvxEwo6YaPkk8-2D_arGcSk4h4UeQ0d5Mg82_HtYWsQxqO3kJOisd64PA4qdB_bBB94u6zoM0KEEFBKx9_YcoauU7_gntJa5cXiR3oI5-QHH6VkcUFzSQeibWDX2t5LB9P0p_fpZu0yHDIciH-9z8v0kdvD48GnlxBal-41OdWUFdTZRORHA0FYqqIKUX6ycPDO7cf60P7TZWzxZVtTYyp6tno_EOgLhDSppD5IjIMj6iXPUKMM-wWteexossf8RydFWOb5E62rcMIfHEbOt_k5wI3MF760bZD25wEX1bhcsdPBbNq8dt0czf2j2pK7geatjpayP-uqRyY1LSmG0FJdcUU_0gPnXgCudb_xpSNh6mARcrCgL49pUf_qTBVvgMNymtGaflmVaaEi_b52R5xSu6LYq6avURFMQ-jsZWYdN856Nh6jKRME9EF0CGmv0Hn8C7rtf-V27uH98DMHnbB8pbv3mk6Ikfdkbx7iF3e1h1oXAilOIUTpTjjD3UkKDQC596g4uFbV8WNfhCKvMOq2jTfqO2RTxxH4cGcX3X3k=w750-h500-no");
     width: 100%;
-    margin-top: 155px;
+    margin-top: 60px; /* override this in the ipad section */
+    margin-bottom: 0px;
+
 }
-
-
-/* .headlineContent {
-    background-color: none;
-    margin-top: 0px; 
-} */
 
 .myName, .headlineText {
-    margin-left: 80px;
-    
+    margin-left: 50px;  
 }
 
-.hello {
-    margin-left: 40px;
-    font-size: 25px;
-    padding: 15px;
-    color: rgb(199,158,158);
-    font-weight: bold;
-}
 
 /* All CSS for About Me page below this line */
 
@@ -90,7 +102,9 @@ h1 {
 .aboutText {
     margin-left: 20px;
     margin-right: 20px;
+    line-height: 30px;
 }
+
 
 /* All CSS for Projects page below this line */
 
@@ -113,20 +127,23 @@ h1 {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    line-height: 30px;
+    padding: 10px;
 }
 
 .project1Img {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 h2.projectTitle {
     font-size: 16px;
     text-align: center;
+    font-family: 'Playfair Display SC', serif;
 }
 
 h3.projectDesc {
-    font-size: 14px;
+    font-size: 14px; /* Make this larger! Not accessible. */
     font-weight: normal;
     text-align: center;
 }
@@ -156,9 +173,9 @@ ul.iconContainer {
 .button {
     text-decoration: none;
     display: inline-block;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid rgb(59,132,138);
     color: black;
-    font-size: 13px;
+    font-size: 13px; /* Make this larger! Not accessible. */
     margin-bottom: 100px;
     margin-left: 30px;
 }
@@ -168,7 +185,7 @@ ul.iconContainer {
 }
 
 .button:hover {
-    border-bottom: 2px solid rgb(54, 185, 199);
+    border-bottom: 2px solid rgb(205,158,93);
     padding: 3px;
 } 
 
@@ -178,12 +195,14 @@ ul.iconContainer {
 
 
 /* Desktop computers */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
 
 
-/* 'Nav CSS below */
+/* Nav CSS below */
+
     h1 {
         margin-left: 50px;
+        font-size: 35px;
     }
 
     ul.nav {
@@ -202,13 +221,10 @@ ul.iconContainer {
     }
     
     li.nav:hover {
-        border-bottom: 1.5px solid rgb(200,127,68);
+        border-bottom: 1.5px solid rgb(205,158,93);
         padding-bottom: 0px;
         padding: 6px;
-    }
-
-    h1 {
-        font-size: 30px;
+        cursor: pointer;
     }
 
     .hamburger {
@@ -218,12 +234,39 @@ ul.iconContainer {
 
 /*  headline CSS */
 
+    .myName, .headlineText {
+        margin-left: 80px;  
+    }  
+    
+    .hello {
+        margin-left: 40px;
+        font-size: 25px;
+        padding: 15px;
+        color: rgb(205,158,93);
+        font-weight: bold;
+    }
+    
+    
+    .bold {
+        font-family: 'Playfair Display SC', serif;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(205,158,93);
+    }
+    
+    .headlineContainer {
+        margin-top: 155px;
+    }
+
     .headlineContent {
         margin-top: 20px;
         margin-left: 375px;
         height: 300px;
         width: 600px;
+        line-height: 32px;
+        font-size: 17px;
     } 
+
     
 /* 'About Page' CSS below  */
 
@@ -237,8 +280,8 @@ ul.iconContainer {
     
     .aboutText {
         float: right;
-        width: 50%;
-        
+        width: 50%; 
+        line-height: 30px;
     }
     
     .aboutImg {
@@ -247,43 +290,138 @@ ul.iconContainer {
 
 /* Projects CSS below */
 
-.projectsPage {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
-    align-content: center;
-}
+    .projectsPage {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        align-content: center;
+    }
 
 
-.projectContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    .projectContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px;
+        
+    }
+
+    .buttonContainer {
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        
+    } 
     
+    img.icon {
+        height: 30px;
+    }
+
+    .imgContainer {
+        align-self: center;
+        margin-right: 20px;
+    }
+
+    h2.projectTitle {
+        font-size: 28px;
+    }
+
+    h3.projectDesc {
+        font-size: 16px;
+    }
+
+    .button {
+        margin-bottom: 0px;
+        margin-left: 35px;
+        font-size: 16px;
+    }
+
 }
 
-.buttonContainer {
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: flex-end;
-      
-} 
 
-.imgContainer {
-    align-self: center;
+
+
+
+
+/* iPads */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+/* iPad Nav CSS below */
+
+    h1 {
+        margin-left: 50px;
+        font-size: 30px;
+    }
+
+    ul.nav {
+      margin-right: 80px;
+    }
+
+    ul.nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    ul.nav > li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 30px; 
+        margin-right: 10px;
+    }
+    
+    li.nav:hover {
+        border-bottom: 1.5px solid rgb(205,158,93);
+        padding-bottom: 0px;
+        padding: 6px;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+/*  iPad headline CSS */
+    .headlineContainer {
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        margin-bottom: 0px;
+        /* margin-top: 520px; */
+    }
+
+    .myName, .headlineText {
+        margin-left: 80px;  
+    }  
+    
+    .hello {
+        margin-left: 40px;
+        font-size: 25px;
+        padding: 15px;
+        color: rgb(205,158,93);
+        font-weight: bold;
+    }
+    
+    
+    .bold {
+        font-family: 'Playfair Display SC', serif;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(205,158,93);
+    }
+
+    .headlineContent {
+        /* margin-top: 100px; */
+        height: 300px;
+        width: 600px;
+        line-height: 32px;
+        font-size: 20px;
+    } 
+
 }
-
-.button {
-    margin-bottom: 0px;
-    margin-left: 30px;
-}
-
-}
-
 
 
 
