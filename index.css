@@ -1,9 +1,56 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Start of my code */
+
 * {
     box-sizing: border-box;
 }
 body {
     font-family: 'Playfair Display', serif;
     margin: 0;
+    background-color: rgb(252,253,255);
 }
 
 /* All navigation CSS below this line */
@@ -20,8 +67,10 @@ ul.nav {
 header {
     display: flex; 
     justify-content: space-between;
+    align-items: center;
     position:fixed;
     width: 100%;
+    height: 70px;
     background-color: rgba(59,132,138,0.3);
     top: 0;
 }
@@ -119,6 +168,7 @@ h1 {
     margin-right: 20px;
     line-height: 30px;
     font-size: 16px;
+    margin-bottom: 150px;
 }
 
 
@@ -135,6 +185,7 @@ h1 {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    position: relative;
 }
 
 .projectContent {
@@ -149,7 +200,31 @@ h1 {
 
 .project1Img {
     width: 100%;
-    margin-top: 130px;
+    margin-top: 0px;
+}
+
+.imgContainer:hover .project1Img {
+    opacity: 0.5;
+}
+
+.imgText {
+    align-self: center;
+    position: absolute;
+    background-color:rgba(231,188,131, 0.8);
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.imgContainer:hover .imgText {
+    opacity: 1;
+    cursor: pointer;
 }
 
 h2.projectTitle {
@@ -222,9 +297,7 @@ ul.iconContainer {
     }
 
     ul.nav {
-      margin-right: 80px;
-    }
-    ul.nav {
+        margin-right: 80px;
         display: flex;
         align-items: center;
     }
@@ -299,6 +372,7 @@ ul.iconContainer {
         float: right;
         width: 50%; 
         line-height: 30px;
+        margin-bottom: 0px;
     }
     
     .aboutImg {
@@ -332,9 +406,16 @@ ul.iconContainer {
         align-items: flex-end;
         
     } 
+
+    .imgText {
+        height: 80px;
+        padding: 20px;
+        font-size: 30px;
+    }
     
     img.icon {
         height: 30px;
+        margin-bottom: 20px;
     }
  
     .imgContainer {
@@ -349,10 +430,12 @@ ul.iconContainer {
 
     h2.projectTitle {
         font-size: 28px;
+        margin-bottom: 30px;
     }
 
     h3.projectDesc {
         font-size: 16px;
+        margin-bottom: 20px;
     }
 
     .button {
@@ -367,6 +450,9 @@ ul.iconContainer {
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 
 /* iPad Pro Nav CSS below */
+    header {
+        height: 120px;
+    }
 
     h1 {
         margin-left: 50px;
@@ -414,6 +500,7 @@ ul.iconContainer {
     .aboutImg {
         height: 700px;
         margin-top: 0px;
+        margin-bottom: 50px;
     }
 
     .aboutText {
@@ -421,6 +508,7 @@ ul.iconContainer {
         line-height: 50px;
         margin-right: 40px;
         margin-left: 40px;
+        margin-bottom: 0px;
     }
 
 /* iPad Pro Project CSS */
@@ -429,18 +517,27 @@ ul.iconContainer {
         margin-top: 0px;
     }
 
+    .imgText {
+        height: 100px;
+        padding: 30px;
+        font-size: 35px;
+    }
+
     h2.projectTitle {
         font-size: 45px;
         margin-top: 75px;
+        margin-bottom: 40px;
     }
     
     h3.projectDesc {
         font-size: 35px;
-        line-height: 50px;
+        line-height: 60px;
+        margin-bottom: 40px;
     }
 
     img.icon {
         height: 50px;
+        margin-bottom: 30px;
     }
 
     .button {
@@ -463,6 +560,10 @@ ul.iconContainer {
 @media screen and (min-width: 481px) and (max-width: 1023px) {
 
 /* iPad Nav CSS below */
+
+    header {
+        height: 100px;
+    }
 
     h1 {
         margin-left: 50px;
@@ -510,6 +611,7 @@ ul.iconContainer {
     .aboutImg {
         height: 500px;
         margin-top: 0px;
+        margin-bottom: 50px;
     }
 
     .aboutText {
@@ -517,6 +619,7 @@ ul.iconContainer {
         line-height: 40px;
         margin-right: 40px;
         margin-left: 40px;
+        margin-bottom: 0px;
     }
 
 /* iPad Project CSS */
@@ -528,15 +631,24 @@ ul.iconContainer {
     h2.projectTitle {
         font-size: 35px;
         margin-top: 75px;
+        margin-bottom: 30px;
     }
     
     h3.projectDesc {
         font-size: 25px;
         line-height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .imgText {
+        height: 80px;
+        padding: 20px;
+        font-size: 30px;
     }
 
     img.icon {
         height: 50px;
+        margin-bottom: 30px;
     }
 
     .button {
@@ -564,4 +676,10 @@ ul.iconContainer {
 
 }
 
-
+/* Safari CSS */
+    
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+    .headlineContainer { 
+        display: none;
+    }
+}
