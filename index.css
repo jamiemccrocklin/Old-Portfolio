@@ -330,6 +330,24 @@ ul.iconContainer {
     border-bottom: 2px solid rgb(205,158,93);
 } */
 
+/* Footer CSS */
+.footerIcons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.media-icon {
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.media-icon:hover {
+    cursor: pointer;
+}
+
 
 
 /* Desktop computers */
@@ -337,9 +355,9 @@ ul.iconContainer {
 
 /* Nav CSS below */
 
-    /* .mobile-nav, .menu-btn {
+    .mobile-nav, .menu-btn {
         display: none;
-    } */
+    }
 
     h1 {
         margin-left: 50px;
@@ -489,6 +507,10 @@ ul.iconContainer {
         font-size: 16px;
     }
 
+    .media-icon {
+        height: 30px;
+    }
+
 }
 
 /* iPad Pro */
@@ -600,6 +622,10 @@ ul.iconContainer {
     .button:hover {
         border-bottom: 6px solid rgb(205,158,93);
         padding: 20px;
+    }
+
+    .media-icon {
+        height: 35px;
     }
 
 }
@@ -716,6 +742,10 @@ ul.iconContainer {
     .button:hover {
         border-bottom: 4px solid rgb(205,158,93);
         padding: 15px;
+    }
+
+    .media-icon {
+        height: 30px;
     }
 }
 
@@ -905,5 +935,9 @@ ul.iconContainer {
         margin-bottom: 0px;
         margin-left: 35px;
         font-size: 30px;
+    }
+
+    .media-icon {
+        height: 35px;
     }
 }

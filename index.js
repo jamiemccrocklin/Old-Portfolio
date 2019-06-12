@@ -1,5 +1,6 @@
 //Scroll to about page
 $(document).ready(function(){
+    console.log('scroll to about page working');
     $(document).on('click', '.about', function(event) {
         event.preventDefault();
         $('html, body').animate({
@@ -11,6 +12,7 @@ $(document).ready(function(){
 //Scroll to projects page
 $(document).ready(function(){
     $(document).on('click', '.projects', function(event) {
+        console.log('scroll to projects page working');
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(".projectsPage").offset().top
@@ -21,20 +23,17 @@ $(document).ready(function(){
 
 //on click of hamburger, dropdown menu with li options
 $(document).ready(function(){
-    $(document).on('click', '.menu-btn', function(){
+    console.log('dropdown menu running');
+    $('header').on('click', '.menu-btn', function(){
         $('.navItems').slideToggle(500);
     });
 })
 
-//Dropdown menu closes after clicking a link 
+//Dropdown menu closes after clicking a link and closes on click anywhere outside of the menu
 
-$(document).click(function(){
+$(document).on('click', function(event){
+    // event.preventDefault();
+    console.log('menu closing working');
     $('.navItems').hide();
 });
 
-
-//dropdown menu closes on click anywhere outside of the menu
-
-$(document).click(function(){
-    $('.navItems').hide();
-  });
