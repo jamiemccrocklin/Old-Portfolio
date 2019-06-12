@@ -28,11 +28,13 @@ $(document).ready(function(){
 
 //Dropdown menu closes after clicking a link 
 
-
+$(document).click(function(){
+    $('.navItems').hide();
+});
 
 
 //dropdown menu closes on click anywhere outside of the menu
 
 $(document).click(function(){
     $('.navItems').hide();
-});
+  });
