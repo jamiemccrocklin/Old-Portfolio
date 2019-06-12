@@ -31,9 +31,21 @@ $(document).ready(function(){
 
 //Dropdown menu closes after clicking a link and closes on click anywhere outside of the menu
 
-$(document).on('click', function(event){
-    // event.preventDefault();
-    console.log('menu closing working');
-    $('.navItems').hide();
+// $(document).on('click', function(event){
+//     // event.preventDefault();
+//     console.log('menu closing working');
+//     $('.navItems').hide();
+// });
+
+let showHamburger = false
+$(document).on('click', '.menu-btn', function(){
+    if (!showHamburger) {
+        $('.navItems').slideToggle(500);
+        showHamburger  = true
+     }
+     else {
+        $('.navItems').hide();
+         showHamburger   = false
+     }
 });
 
