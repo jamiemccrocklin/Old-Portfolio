@@ -32,12 +32,20 @@ $(document).ready(function(event){
 
 //Dropdown menu closes after clicking a link and closes on click anywhere outside of the menu
 
+// $(document).on('click', function(event){
+//     var length = $('.mobileNav:visible').length;
+//     console.log('menu closing working');
+//     if ($('.mobileNav:visible').length) { 
+//         $('.navItems').hide();
+//     }
+//     console.log(length);
+// });
+
+
+
 $(document).on('click', function(event){
-    console.log('menu closing working');
-    if ($('.mobileNav:visible') != null) {
+    if ($(document).width()<=1199) {
         $('.navItems').hide();
     }
 });
-
-
 
