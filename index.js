@@ -22,30 +22,20 @@ $(document).ready(function(){
 
 
 //on click of hamburger, dropdown menu with li options
-$(document).ready(function(){
-    console.log('dropdown menu running');
-    $('header').on('click', '.menu-btn', function(){
+$(document).ready(function(event){
+    $('header').on('click', '.menu-btn', function(event){
+        event.stopPropagation();
+        console.log('dropdown menu running');
         $('.navItems').slideToggle(500);
     });
 })
 
 //Dropdown menu closes after clicking a link and closes on click anywhere outside of the menu
 
-// $(document).on('click', function(event){
-//     // event.preventDefault();
-//     console.log('menu closing working');
-//     $('.navItems').hide();
-// });
-
-let showHamburger = false
-$(document).on('click', '.menu-btn', function(){
-    if (!showHamburger) {
-        $('.navItems').slideToggle(500);
-        showHamburger  = true
-     }
-     else {
-        $('.navItems').hide();
-         showHamburger   = false
-     }
+$(document).on('click', function(event){
+    console.log('menu closing working');
+    $('.navItems').hide();
 });
+
+
 

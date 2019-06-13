@@ -355,7 +355,7 @@ ul.iconContainer {
 
 /* Nav CSS below */
 
-    .mobile-nav, .menu-btn {
+    .menu-btn {
         display: none;
     }
 
@@ -368,6 +368,12 @@ ul.iconContainer {
         margin-right: 80px;
         display: flex;
         align-items: center;
+        position: static;
+        justify-content: space-evenly;
+        width: 100%; 
+        height: 30px;
+        line-height: 0px;
+        padding: 10px;
     }
     
     .navItems > li {
@@ -766,8 +772,20 @@ ul.iconContainer {
 
 /* Nav CSS below */
 
-    .mobile-nav, .menu-btn {
+    .menu-btn {
         display: none;
+    }
+
+    .navItems {
+        margin-right: 80px;
+        display: flex;
+        align-items: center;
+        position: static;
+        justify-content: space-evenly;
+        width: 100%; 
+        height: 30px;
+        line-height: 0px;
+        padding: 10px;
     }
 
     header {
