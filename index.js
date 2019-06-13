@@ -34,7 +34,9 @@ $(document).ready(function(event){
 
 $(document).on('click', function(event){
     console.log('menu closing working');
-    $('.navItems').hide();
+    if ($('.mobileNav:visible') != null) {
+        $('.navItems').hide();
+    }
 });
 
 
