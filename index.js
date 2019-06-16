@@ -1,7 +1,29 @@
-//Scroll to about page
+//Scroll to about page from nav bar
 $(document).ready(function(){
     console.log('scroll to about page working');
     $(document).on('click', '.about', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".aboutPage").offset().top
+        }, 1000);
+    })
+})
+
+//Scroll to about page from 'learn more'
+$(document).ready(function(){
+    console.log('scroll to about page working');
+    $(document).on('click', '.check', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".aboutPage").offset().top
+        }, 1000);
+    })
+})
+
+//Scroll to about page from arrow button
+$(document).ready(function(){
+    console.log('scroll to about page working');
+    $(document).on('click', '.arrow', function(event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(".aboutPage").offset().top
@@ -31,17 +53,6 @@ $(document).ready(function(event){
 })
 
 //Dropdown menu closes after clicking a link and closes on click anywhere outside of the menu
-
-// $(document).on('click', function(event){
-//     var length = $('.mobileNav:visible').length;
-//     console.log('menu closing working');
-//     if ($('.mobileNav:visible').length) { 
-//         $('.navItems').hide();
-//     }
-//     console.log(length);
-// });
-
-
 
 $(document).on('click', function(event){
     if ($(document).width()<=1199) {
