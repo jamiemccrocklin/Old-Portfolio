@@ -134,6 +134,10 @@ h1 {
     letter-spacing: 3px;
 }
 
+h1:hover {
+    cursor: pointer;
+}
+
 .hello {
     margin-left: 20px;
     font-size: 18px;
@@ -257,6 +261,22 @@ h1 {
     margin-bottom: 150px;
 }
 
+.contactInfo {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(59,132,138);
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(59,132,138);
+}
+
+.contactInfo:hover {
+    cursor: pointer;
+    color: rgb(205,158,93);
+    border-bottom: 1px solid rgb(205,158,93);
+    padding-bottom: 3px;
+    padding-top: 0px;
+}
+
 
 /* All CSS for Projects page below this line */
 
@@ -367,11 +387,13 @@ ul.iconContainer {
 
 .button.live:hover {
     padding-bottom: 5px;
+    padding-top: 0px;
     border-bottom: 2px solid rgb(205,158,93);
 }
 
 .button.code:hover {
     padding-bottom: 5px;
+    padding-top: 0px;
     border-bottom: 2px solid rgb(205,158,93);
 }
 
@@ -391,8 +413,8 @@ ul.iconContainer {
 
 .media-icon:hover {
     cursor: pointer;
+    height: 25px;
 }
-
 
 
 /* Desktop computers */
@@ -567,6 +589,10 @@ ul.iconContainer {
         height: 30px;
     }
 
+    .media-icon:hover {
+        height: 35px;
+    }
+
 }
 
 /* iPad Pro */
@@ -710,6 +736,10 @@ ul.iconContainer {
         height: 35px;
     }
 
+    .media-icon:hover {
+        height: 40px;
+    }
+
 }
 
 
@@ -850,6 +880,10 @@ ul.iconContainer {
 
     .media-icon {
         height: 30px;
+    }
+
+    .media-icon:hover {
+        height: 35px;
     }
 }
 
@@ -1077,6 +1111,11 @@ ul.iconContainer {
     .media-icon {
         height: 35px;
     }
+
+    .media-icon:hover {
+        height: 40px;
+    }
+
 }
 
 

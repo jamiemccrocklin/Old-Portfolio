@@ -1,3 +1,13 @@
+//Scroll to about home page from click of name
+$(document).ready(function(){
+    $(document).on('click', 'h1', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("body").offset().top
+        }, 1000);
+    })
+})
+
 //Scroll to about page from nav bar
 $(document).ready(function(){
     console.log('scroll to about page working');
@@ -38,6 +48,17 @@ $(document).ready(function(){
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(".projectsPage").offset().top
+        }, 1000);
+    })
+})
+
+//Scroll to contact information
+$(document).ready(function(){
+    $(document).on('click', '.contactInfo', function(event) {
+        console.log('scroll to projects page working');
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".footerIcons").offset().top
         }, 1000);
     })
 })
