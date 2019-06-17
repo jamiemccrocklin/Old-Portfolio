@@ -53,6 +53,10 @@ body {
     background-color: rgb(252,253,255);
 }
 
+main {
+    width: 100%;
+}
+
 /* All navigation CSS below this line */
 
 a {
@@ -281,8 +285,8 @@ h1:hover {
 /* All CSS for Projects page below this line */
 
 .projectsPage {
-    height: 100vh;
     width:100%;
+    height: 100%;
 }
 
 .imgContainer {
@@ -377,7 +381,7 @@ ul.iconContainer {
     color: black;
     padding: 3px;
     font-size: 16px; 
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-left: 30px;
 }
 
@@ -401,7 +405,7 @@ ul.iconContainer {
 .footerIcons {
     display: flex;
     justify-content: center;
-
+    align-items: flex-end;
 }
 
 .media-icon {
@@ -587,6 +591,7 @@ ul.iconContainer {
 
     .media-icon {
         height: 30px;
+        margin-top: 100px;
     }
 
     .media-icon:hover {
@@ -690,6 +695,11 @@ ul.iconContainer {
         margin-bottom: 100px;
         margin-top: 100px;
     }
+
+    .contactInfo {
+        font-size: 35px;
+    }
+
 /* iPad Pro Project CSS */
 
     .project1Img {
@@ -743,8 +753,10 @@ ul.iconContainer {
 }
 
 
+
+
 /* iPads */
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
 /* iPad Nav CSS below */
     .menu-btn div {
@@ -867,8 +879,7 @@ ul.iconContainer {
 
     .button {
         font-size: 25px;
-        margin-left: 100px;
-        margin-top: 40px;
+        margin-top: 10px;
         border-bottom: 4px solid rgb(59,132,138);
         padding: 10px;
     }
@@ -1159,5 +1170,13 @@ ul.iconContainer {
     .check {
         font-size: 16px;
         padding-top: 0px;
+    }
+
+    .aboutImg {
+        margin-top: 200px;
+    }
+
+    .project1Img {
+        margin-top: 50px;
     }
 }
