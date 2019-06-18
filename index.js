@@ -10,7 +10,6 @@ $(document).ready(function(){
 
 //Scroll to about page from nav bar
 $(document).ready(function(){
-    console.log('scroll to about page working');
     $(document).on('click', '.about', function(event) {
         event.preventDefault();
         $('html, body').animate({
@@ -21,7 +20,6 @@ $(document).ready(function(){
 
 //Scroll to about page from 'learn more'
 $(document).ready(function(){
-    console.log('scroll to about page working');
     $(document).on('click', '.check', function(event) {
         event.preventDefault();
         $('html, body').animate({
@@ -32,7 +30,6 @@ $(document).ready(function(){
 
 //Scroll to about page from arrow button
 $(document).ready(function(){
-    console.log('scroll to about page working');
     $(document).on('click', '.arrow', function(event) {
         event.preventDefault();
         $('html, body').animate({
@@ -44,7 +41,6 @@ $(document).ready(function(){
 //Scroll to projects page
 $(document).ready(function(){
     $(document).on('click', '.projects', function(event) {
-        console.log('scroll to projects page working');
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(".projectsPage").offset().top
@@ -55,7 +51,6 @@ $(document).ready(function(){
 //Scroll to contact information
 $(document).ready(function(){
     $(document).on('click', '.contactInfo', function(event) {
-        console.log('scroll to projects page working');
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(".footerIcons").offset().top
@@ -68,7 +63,6 @@ $(document).ready(function(){
 $(document).ready(function(event){
     $('header').on('click', '.menu-btn', function(event){
         event.stopPropagation();
-        console.log('dropdown menu running');
         $('.navItems').slideToggle(500);
     });
 })
